@@ -1,6 +1,6 @@
 {
   "name": "local-caching",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A programmatic data caching wrapper for browsers, based on localStorage.",
   "main": "dist/local-caching.es.js",
   "scripts": {

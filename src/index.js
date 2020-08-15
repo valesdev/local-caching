@@ -71,7 +71,7 @@ export default class {
     if (typeof payload === 'string' && payload.length > 0) {
       return JSON.parse(payload)
     }
-    return null
+    return undefined
   }
 
   _remove (key) {
