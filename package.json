@@ -1,0 +1,29 @@
+{
+  "name": "local-caching",
+  "version": "1.0.0",
+  "description": "A programmatic data caching wrapper for browsers, based on localStorage.",
+  "main": "dist/local-caching.es.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valesdev/local-caching.git"
+  },
+  "author": "Yuan Chong <ychongsaytc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valesdev/local-caching/issues"
+  },
+  "homepage": "https://github.com/valesdev/local-caching#readme",
+  "keywords": [
+    "LocalStorage",
+    "Cache",
+    "Caching"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "rollup": "^2.25.0",
+    "terser": "^5.1.0"
+  }
+}

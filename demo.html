@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no, email=no, address=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+    <title>local-caching demo</title>
+
+    <script type="application/javascript" src="//unpkg.com/local-caching/dist/local-caching.min.js"></script>
+  </head>
+  <body>
+    <script type="application/javascript">
+      window.document.addEventListener('DOMContentLoaded', function () {
+        window.document.write('<h2>local-caching demo</h2>');
+
+        var localCaching = new LocalCaching();
+        localCaching.init();
+
+        localCaching.set('foo', 'bar', 300e3);
+        localCaching.set('numberValue', 12138, 300e3);
+        localCaching.set('booleanValue', true, 300e3);
+        localCaching.set('nullValue', null, 300e3);
+        localCaching.set('arrayValue', ['bar', 12138, null, true], 300e3);
+        localCaching.set('objectValue', { foo: 'bar' }, 300e3);
+
+        var foo          = localCaching.get('foo');
+        var numberValue  = localCaching.get('numberValue');
+        var booleanValue = localCaching.get('booleanValue');
+        var nullValue    = localCaching.get('nullValue');
+        var arrayValue   = localCaching.get('arrayValue');
+        var objectValue  = localCaching.get('objectValue');
+
+        window.document.write('<p>foo: ' + foo + '</p>');
+        window.document.write('<p>numberValue: ' + numberValue + '</p>');
+        window.document.write('<p>booleanValue: ' + booleanValue + '</p>');
+        window.document.write('<p>nullValue: ' + nullValue + '</p>');
+        window.document.write('<p>arrayValue: ' + arrayValue + '</p>');
+        window.document.write('<p>objectValue: ' + objectValue + '</p>');
+      }, false)
+    </script>
+  </body>
+</html>
