@@ -8,8 +8,16 @@ A programmatic data caching wrapper for browsers, based on localStorage.
 
 ## Installation
 
+### Node.js
+
 ```sh
-npm install --save local-caching
+$ npm install --save local-caching
+```
+
+### Browser via CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/local-caching/dist/index.umd.js"></script>
 ```
 
 ## Usage

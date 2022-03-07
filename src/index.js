@@ -1,6 +1,11 @@
 export default class {
-
-  constructor ({ storeKeyPrefix = 'cache::', storeMetaKeyPrefix = 'cachemeta::' } = { storeKeyPrefix: 'cache::', storeMetaKeyPrefix: 'cachemeta::' }) {
+  constructor ({
+    storeKeyPrefix = 'cache::',
+    storeMetaKeyPrefix = 'cachemeta::'
+  } = {
+    storeKeyPrefix: 'cache::',
+    storeMetaKeyPrefix: 'cachemeta::'
+  }) {
     this.storeKeyPrefix = storeKeyPrefix
     this.storeMetaKeyPrefix = storeMetaKeyPrefix
   }
@@ -77,5 +82,4 @@ export default class {
   _remove (key) {
     window.localStorage.removeItem(key)
   }
-
 }

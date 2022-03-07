@@ -1,10 +1,13 @@
 {
   "name": "local-caching",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A programmatic data caching wrapper for browsers, based on localStorage.",
-  "main": "dist/local-caching.es.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
   "scripts": {
-    "build": "node build.js"
+    "build": "microbundle --format esm,cjs,umd --name LocalCaching"
   },
   "repository": {
     "type": "git",
@@ -22,8 +25,6 @@
     "Caching"
   ],
   "devDependencies": {
-    "@rollup/plugin-buble": "^0.21.3",
-    "rollup": "^2.25.0",
-    "terser": "^5.1.0"
+    "microbundle": "^0.14.2"
   }
 }
